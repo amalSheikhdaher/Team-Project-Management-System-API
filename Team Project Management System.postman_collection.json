@@ -1,0 +1,2994 @@
+{
+	"info": {
+		"_postman_id": "3edbeae7-d86e-4e1e-8bab-c9cc5ead3bf8",
+		"name": "Team Project Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34376611",
+		"_collection_link": "https://cloudy-eclipse-506985.postman.co/workspace/Team-Project-Management-System~809dc323-cbdb-4c4f-8db5-a3e79cd39dc2/collection/34376611-3edbeae7-d86e-4e1e-8bab-c9cc5ead3bf8?action=share&source=collection_link&creator=34376611"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "superadmin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/login"
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "superadmin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Sep 2024 12:03:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Super Admin\",\n        \"email\": \"superadmin@gmail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2024-09-14T12:02:05.000000Z\",\n        \"updated_at\": \"2024-09-14T12:02:05.000000Z\"\n    },\n    \"authorisation\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzE1Mzk0LCJleHAiOjE3MjYzMTg5OTQsIm5iZiI6MTcyNjMxNTM5NCwianRpIjoiOXVGdnZ3SWtCT1Z5SndQYiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JaJWme38mv0M9s6-XMUHEo6-yA5hPP-mJ0hqRMRdQdI\",\n        \"type\": \"bearer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2Mjk5MzM0LCJleHAiOjE3MjYzMDI5MzQsIm5iZiI6MTcyNjI5OTMzNCwianRpIjoibmdCWkoydzM2WDJLMEdtSyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.cy-XTQtRcC0dGoZkUNGltfsWx57ZRrWeck8GCUmNDtI"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/logout"
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:08:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzE1Mzk0LCJleHAiOjE3MjYzMTg5OTQsIm5iZiI6MTcyNjMxNTM5NCwianRpIjoiOXVGdnZ3SWtCT1Z5SndQYiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JaJWme38mv0M9s6-XMUHEo6-yA5hPP-mJ0hqRMRdQdI"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ss",
+									"type": "text"
+								},
+								{
+									"key": "desciption",
+									"value": "sd",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/projects"
+					},
+					"response": [
+						{
+							"name": "Create Project for Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "New Project",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Laravel API Project",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:15:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"New Project\",\n        \"description\": \"Laravel API Project\",\n        \"users\": [],\n        \"tasks\": [],\n        \"created_at\": \"2024-09-16 11:15:42\",\n        \"updated_at\": \"2024-09-16 11:15:42\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDg1MTMzLCJleHAiOjE3MjY0ODg3MzMsIm5iZiI6MTcyNjQ4NTEzMywianRpIjoiODhaUE5mdFJ0ZjlVc05VMCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.N1Cf_IIb_MKS7iPj64wC4bSA-Sd2_vFiO-9GAJmKqGk"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Project New",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Laravel API Project",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/projects/2"
+					},
+					"response": [
+						{
+							"name": "Update Project for Admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Project New",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Laravel API Project",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:19:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Project New\",\n        \"description\": \"Laravel API Project\",\n        \"users\": [],\n        \"tasks\": [],\n        \"created_at\": \"2024-09-16 11:15:42\",\n        \"updated_at\": \"2024-09-16 11:19:52\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzE1Mzk0LCJleHAiOjE3MjYzMTg5OTQsIm5iZiI6MTcyNjMxNTM5NCwianRpIjoiOXVGdnZ3SWtCT1Z5SndQYiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JaJWme38mv0M9s6-XMUHEo6-yA5hPP-mJ0hqRMRdQdI"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/projects/3"
+					},
+					"response": [
+						{
+							"name": "Delete Project For Admin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:33:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Project deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Assigning users to the project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Project Name\",\r\n  \"description\": \"Project Description\",\r\n  \"users\": [\r\n    {\r\n      \"id\": 2,\r\n      \"role\": \"developer\"\r\n    }\r\n\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/projects/3/assign-users"
+					},
+					"response": [
+						{
+							"name": "assign-users for Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Project Name\",\r\n  \"description\": \"Project Description\",\r\n  \"users\": [\r\n    {\r\n      \"id\": 2,\r\n      \"role\": \"developer\"\r\n    }\r\n\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/projects/3/assign-users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Sep 2024 20:37:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Users assigned successfully\"\n}"
+						},
+						{
+							"name": "assign-users",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"users\": [\r\n    {\r\n      \"id\": 2,\r\n      \"role\": \"manager\"\r\n    },\r\n    {\r\n      \"id\": 4,\r\n      \"role\": \"tester\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/assign-users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:10:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Users assigned successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "All Project",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "All Project for Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:30:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"All project fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Default Project\",\n            \"description\": \"This is a default project created by the Super Admin.\",\n            \"users\": [\n                {\n                    \"id\": 1,\n                    \"role\": \"super admin\"\n                }\n            ],\n            \"tasks\": [],\n            \"created_at\": \"2024-09-16 10:39:24\",\n            \"updated_at\": \"2024-09-16 10:39:24\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Project New\",\n            \"description\": \"Laravel API Project\",\n            \"users\": [],\n            \"tasks\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Task title\",\n                    \"description\": \"Task description\",\n                    \"status\": \"new\",\n                    \"priority\": \"high\",\n                    \"due_date\": \"2024-09-30\",\n                    \"note\": null\n                }\n            ],\n            \"created_at\": \"2024-09-16 11:15:42\",\n            \"updated_at\": \"2024-09-16 11:19:52\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"New Project\",\n            \"description\": \"Laravel API Project\",\n            \"users\": [],\n            \"tasks\": [],\n            \"created_at\": \"2024-09-16 11:21:18\",\n            \"updated_at\": \"2024-09-16 11:21:18\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "latest and oldest and high priority",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:37:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Default Project\",\n        \"description\": \"This is a default project created by the Super Admin.\",\n        \"created_at\": \"2024-09-16T10:39:24.000000Z\",\n        \"updated_at\": \"2024-09-16T10:39:24.000000Z\",\n        \"highest_priority_task_with_condition\": null,\n        \"latest_task\": null,\n        \"oldest_task\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Project New\",\n        \"description\": \"Laravel API Project\",\n        \"created_at\": \"2024-09-16T11:15:42.000000Z\",\n        \"updated_at\": \"2024-09-16T11:19:52.000000Z\",\n        \"highest_priority_task_with_condition\": {\n            \"id\": 5,\n            \"title\": \"Title Task\",\n            \"description\": \"Task description\",\n            \"status\": \"new\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-09-30\",\n            \"note\": null,\n            \"project_id\": 2,\n            \"created_at\": \"2024-09-16T15:14:58.000000Z\",\n            \"updated_at\": \"2024-09-16T15:15:49.000000Z\"\n        },\n        \"latest_task\": {\n            \"id\": 5,\n            \"title\": \"Title Task\",\n            \"description\": \"Task description\",\n            \"status\": \"new\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-09-30\",\n            \"note\": null,\n            \"project_id\": 2,\n            \"created_at\": \"2024-09-16T15:14:58.000000Z\",\n            \"updated_at\": \"2024-09-16T15:15:49.000000Z\"\n        },\n        \"oldest_task\": {\n            \"id\": 1,\n            \"title\": \"Title Task\",\n            \"description\": \"Task description\",\n            \"status\": \"new\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-09-30\",\n            \"note\": null,\n            \"project_id\": 2,\n            \"created_at\": \"2024-09-16T11:28:25.000000Z\",\n            \"updated_at\": \"2024-09-16T14:42:45.000000Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Single Project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzQ4MTI0LCJleHAiOjE3MjYzNTE3MjQsIm5iZiI6MTcyNjM0ODEyNCwianRpIjoiUFlvbGZtbDk4cUdZNGxEUSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JvvsG6iMSUSZvXpA4ASrxEVJZL2h8V8Zf_LkSdVomlE"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/projects/1"
+					},
+					"response": [
+						{
+							"name": "Show Single Project for Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:29:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Project retrieved successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Project New\",\n        \"description\": \"Laravel API Project\",\n        \"users\": [],\n        \"tasks\": [\n            {\n                \"id\": 1,\n                \"title\": \"Task title\",\n                \"description\": \"Task description\",\n                \"status\": \"new\",\n                \"priority\": \"high\",\n                \"due_date\": \"2024-09-30\",\n                \"note\": null\n            }\n        ],\n        \"created_at\": \"2024-09-16 11:15:42\",\n        \"updated_at\": \"2024-09-16 11:19:52\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "All User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "All User For Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:01:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"All users fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"super admin\",\n            \"email\": \"superadmin@gmail.com\",\n            \"projects\": [\n                {\n                    \"project_name\": \"Default Project\",\n                    \"role\": \"super admin\",\n                    \"tasks\": []\n                }\n            ],\n            \"created_at\": \"2024-09-16 10:39:24\",\n            \"updated_at\": \"2024-09-16 10:39:24\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Yara\",\n            \"email\": \"yara@gmail.com\",\n            \"projects\": [\n                {\n                    \"project_name\": \"Project New\",\n                    \"role\": \"manager\",\n                    \"tasks\": [\n                        {\n                            \"id\": 1,\n                            \"title\": \"Task title\"\n                        }\n                    ]\n                }\n            ],\n            \"created_at\": \"2024-09-16 13:50:38\",\n            \"updated_at\": \"2024-09-16 13:50:38\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDk1ODQyLCJleHAiOjE3MjY0OTk0NDIsIm5iZiI6MTcyNjQ5NTg0MiwianRpIjoiU1U2RkhTd09Sc081N0RYRSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BAiWazMCIE5SsrXtkPB9qOEucSY9wtX8VKD2izDuBSQ"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Yara",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "yara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/users"
+					},
+					"response": [
+						{
+							"name": "Create User for Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Yara",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "yara@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/users"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 13:50:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Yara\",\n        \"email\": \"yara@gmail.com\",\n        \"projects\": [],\n        \"created_at\": \"2024-09-16 13:50:38\",\n        \"updated_at\": \"2024-09-16 13:50:38\"\n    }\n}"
+						},
+						{
+							"name": "Create User for Manager",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Yara",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "yara@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/users"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:09:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzQ5OTAyLCJleHAiOjE3MjYzNTM1MDIsIm5iZiI6MTcyNjM0OTkwMiwianRpIjoidnowMVA2aEVFV3JLelczUiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-lSWTkk7sjY4vxctovCvteOqDbnh7fX02SlsQ5g2qWA"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/users/1"
+					},
+					"response": [
+						{
+							"name": "Show Single User for Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/users/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:03:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User retrieved successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Yara\",\n        \"email\": \"yara@gmail.com\",\n        \"projects\": [\n            {\n                \"project_name\": \"Project New\",\n                \"role\": \"manager\",\n                \"tasks\": [\n                    {\n                        \"id\": 1,\n                        \"title\": \"Task title\"\n                    }\n                ]\n            }\n        ],\n        \"created_at\": \"2024-09-16 13:50:38\",\n        \"updated_at\": \"2024-09-16 13:50:38\"\n    }\n}"
+						},
+						{
+							"name": "Show for Manager",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/users/2"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:14:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzQ5OTAyLCJleHAiOjE3MjYzNTM1MDIsIm5iZiI6MTcyNjM0OTkwMiwianRpIjoidnowMVA2aEVFV3JLelczUiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-lSWTkk7sjY4vxctovCvteOqDbnh7fX02SlsQ5g2qWA"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "sara1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/users/5"
+					},
+					"response": [
+						{
+							"name": "Update User for Admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "yara",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "yara1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "123456789",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/users/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:05:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"yara\",\n        \"email\": \"yara1@gmail.com\",\n        \"projects\": [],\n        \"created_at\": \"2024-09-16 14:04:34\",\n        \"updated_at\": \"2024-09-16 14:05:29\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2MzQ5OTAyLCJleHAiOjE3MjYzNTM1MDIsIm5iZiI6MTcyNjM0OTkwMiwianRpIjoidnowMVA2aEVFV3JLelczUiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-lSWTkk7sjY4vxctovCvteOqDbnh7fX02SlsQ5g2qWA"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/users/5"
+					},
+					"response": [
+						{
+							"name": "Delete User for Admin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/users/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:07:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"User deleted successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDk0NTg0LCJleHAiOjE3MjY0OTgxODQsIm5iZiI6MTcyNjQ5NDU4NCwianRpIjoiTTcxSzJhWFYyMEpZTzlOciIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6AptVSdQdPpHuFnVbh0mvzZeLJJD-M1H5yAW7nRLB3k"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Task title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Task description",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "due_date",
+									"value": "2024-09-30",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/projects/2/tasks"
+					},
+					"response": [
+						{
+							"name": "Create Task for Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Task title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Task description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "priority",
+											"value": "high",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2024-09-30",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 11:28:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task created successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"project_id\": 2,\n        \"note\": null,\n        \"created_at\": \"2024-09-16T11:28:25.000000Z\",\n        \"updated_at\": \"2024-09-16T11:28:25.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "create for manager",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Task title",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Task description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "priority",
+											"value": "high",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2024-09-30",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task created successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"project_id\": 2,\n        \"note\": null,\n        \"created_at\": \"2024-09-16T15:14:58.000000Z\",\n        \"updated_at\": \"2024-09-16T15:14:58.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show Single Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2Mzk4NjU3LCJleHAiOjE3MjY0MDIyNTcsIm5iZiI6MTcyNjM5ODY1NywianRpIjoiV1FnUmd3TDV2aEZLYWJDNiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ibThhcy-ByvVJYCtVx4KJuv-WmqomMji2CWcB_ynuzY"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/projects/4/tasks/2"
+					},
+					"response": [
+						{
+							"name": "Show Single Task for Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:37:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task retrieved successfully\",\n    \"task\": {\n        \"id\": 1,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"note\": null,\n        \"project_id\": 2,\n        \"created_at\": \"2024-09-16T11:28:25.000000Z\",\n        \"updated_at\": \"2024-09-16T11:28:25.000000Z\",\n        \"project\": {\n            \"id\": 2,\n            \"name\": \"Project New\",\n            \"description\": \"Laravel API Project\",\n            \"created_at\": \"2024-09-16T11:15:42.000000Z\",\n            \"updated_at\": \"2024-09-16T11:19:52.000000Z\"\n        },\n        \"users\": [\n            {\n                \"id\": 2,\n                \"name\": \"Yara\",\n                \"email\": \"yara@gmail.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2024-09-16T13:50:38.000000Z\",\n                \"updated_at\": \"2024-09-16T13:50:38.000000Z\",\n                \"pivot\": {\n                    \"project_id\": 2,\n                    \"user_id\": 2,\n                    \"role\": \"manager\",\n                    \"contribution_hours\": 0,\n                    \"last_activity\": null\n                }\n            }\n        ]\n    },\n    \"users\": [\n        {\n            \"id\": 2,\n            \"name\": \"Yara\",\n            \"email\": \"yara@gmail.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2024-09-16T13:50:38.000000Z\",\n            \"updated_at\": \"2024-09-16T13:50:38.000000Z\",\n            \"pivot\": {\n                \"project_id\": 2,\n                \"user_id\": 2,\n                \"role\": \"manager\",\n                \"contribution_hours\": 0,\n                \"last_activity\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDAyNDEwLCJleHAiOjE3MjY0MDYwMTAsIm5iZiI6MTcyNjQwMjQxMCwianRpIjoibkNvOWFIeVZpZzZ0WHVtOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4m4_nZIZJUDXe2BzP4LeyXoOejiw0Lhpf5Jeaq1mpP0"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Task",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Task",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "new",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "high",
+									"type": "text"
+								},
+								{
+									"key": "due_date",
+									"value": "2024-09-30",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/projects/4/tasks/8"
+					},
+					"response": [
+						{
+							"name": "Update Task for Admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Title Task",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Task description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "priority",
+											"value": "high",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2024-09-30",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:42:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Title Task\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"project_id\": 2,\n        \"note\": null,\n        \"created_at\": \"2024-09-16T11:28:25.000000Z\",\n        \"updated_at\": \"2024-09-16T14:42:45.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "update for manager",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Title Task",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Task description",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "new",
+											"type": "text"
+										},
+										{
+											"key": "priority",
+											"value": "high",
+											"type": "text"
+										},
+										{
+											"key": "due_date",
+											"value": "2024-09-30",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:15:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"Title Task\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"project_id\": 2,\n        \"note\": null,\n        \"created_at\": \"2024-09-16T15:14:58.000000Z\",\n        \"updated_at\": \"2024-09-16T15:15:49.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDAyNDEwLCJleHAiOjE3MjY0MDYwMTAsIm5iZiI6MTcyNjQwMjQxMCwianRpIjoibkNvOWFIeVZpZzZ0WHVtOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4m4_nZIZJUDXe2BzP4LeyXoOejiw0Lhpf5Jeaq1mpP0"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/projects/4/tasks/8"
+					},
+					"response": [
+						{
+							"name": "Delete Task for Admin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:44:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "assign-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDE0MzYxLCJleHAiOjE3MjY0MTc5NjEsIm5iZiI6MTcyNjQxNDM2MSwianRpIjoiNFZ4VEo4d21wandmTlNVaCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.UXeca4-pZtzDbnVhEw3PFrhJgM-XfAGDJWsPoYMvWoM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "developer",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/projects/4/tasks/9/assign"
+					},
+					"response": [
+						{
+							"name": "assign-user for admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "developer",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/projects/2/tasks/3/assign"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:49:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User assigned to task successfully with role\",\n    \"task\": {\n        \"id\": 3,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"note\": null,\n        \"project_id\": 2,\n        \"created_at\": \"2024-09-16T14:48:32.000000Z\",\n        \"updated_at\": \"2024-09-16T14:48:32.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDM0Mjc4LCJleHAiOjE3MjY0Mzc4NzgsIm5iZiI6MTcyNjQzNDI3OCwianRpIjoiS1YwM0k2bHdUbEQxdU01MCIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.E-gTRzDEkGXhMQntJAyAw_LEVdjcgSP1cuNP29Jo7-g"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "in_progress",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/tasks/4/status"
+					},
+					"response": [
+						{
+							"name": "update status for admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "in_progress",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/tasks/3/status"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:50:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized.\"\n}"
+						},
+						{
+							"name": "update status for developer",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "in_progress",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/tasks/4/status"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:23:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task status updated successfully\",\n    \"task\": {\n        \"id\": 4,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"in_progress\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"project_id\": 2,\n        \"note\": \"note\",\n        \"created_at\": \"2024-09-16T15:08:18.000000Z\",\n        \"updated_at\": \"2024-09-16T15:23:14.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDM2MDk1LCJleHAiOjE3MjY0Mzk2OTUsIm5iZiI6MTcyNjQzNjA5NSwianRpIjoib3BUcXZRaTRJRlZOMDhLNiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0._hwDUcdzq4g-ExsMPM9qrL-Y_bzEaoAZwRmLF00pJHY"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "note",
+									"value": "vggggg",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/api/tasks/3/note"
+					},
+					"response": [
+						{
+							"name": "Add Note for admin",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "note",
+											"value": "note",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/tasks/3/note"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:51:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized.\"\n}"
+						},
+						{
+							"name": "Add Note for tester",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "note",
+											"value": "note",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/tasks/4/note"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:12:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note added successfully\",\n    \"task\": {\n        \"id\": 4,\n        \"title\": \"Task title\",\n        \"description\": \"Task description\",\n        \"status\": \"new\",\n        \"priority\": \"high\",\n        \"due_date\": \"2024-09-30\",\n        \"note\": \"note\",\n        \"project_id\": 2,\n        \"created_at\": \"2024-09-16T15:08:18.000000Z\",\n        \"updated_at\": \"2024-09-16T15:12:16.000000Z\",\n        \"project\": {\n            \"id\": 2,\n            \"name\": \"Project New\",\n            \"description\": \"Laravel API Project\",\n            \"created_at\": \"2024-09-16T11:15:42.000000Z\",\n            \"updated_at\": \"2024-09-16T11:19:52.000000Z\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Add Note for developer",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "note",
+											"value": "note",
+											"type": "text"
+										}
+									]
+								},
+								"url": "http://127.0.0.1:8000/api/tasks/4/note"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 15:23:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "All Task",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "All Task for Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/tasks"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 16 Sep 2024 14:52:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"All tasks fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Title Task\",\n            \"description\": \"Task description\",\n            \"status\": \"new\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-09-30\",\n            \"project_id\": 2,\n            \"note\": null,\n            \"created_at\": \"2024-09-16T11:28:25.000000Z\",\n            \"updated_at\": \"2024-09-16T14:42:45.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Task title\",\n            \"description\": \"Task description\",\n            \"status\": \"new\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-09-30\",\n            \"project_id\": 2,\n            \"note\": null,\n            \"created_at\": \"2024-09-16T14:48:32.000000Z\",\n            \"updated_at\": \"2024-09-16T14:48:32.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NTE3NTgyLCJleHAiOjE3MjY1MjExODMsIm5iZiI6MTcyNjUxNzU4MywianRpIjoiMk5yMGhndlFwVXVNTzJJTyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.k8i5vGRAyX53tHtM2vlwumj3dR38N6NEHLXdmq67Gtk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tasks/filter?status=in_progress&priority=high",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tasks",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "in_progress"
+								},
+								{
+									"key": "priority",
+									"value": "high"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "start task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NTYyNjA3LCJleHAiOjE3MjY1NjYyMDgsIm5iZiI6MTcyNjU2MjYwOCwianRpIjoibXI1YU9pM3NtVzVBQWc4ZiIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.e0GbSgVbbJ4XkY19ZrTSKIeJnWdbud2s9DkpqYfl3T0"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8000/api/tasks/4/start"
+					},
+					"response": [
+						{
+							"name": "start task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/tasks/4/start"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 08:46:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task started successfully.\"\n}"
+						},
+						{
+							"name": "start task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/tasks/4/start"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 09:27:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task started at 2024-09-17 09:27:40\"\n}"
+						},
+						{
+							"name": "start task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "http://127.0.0.1:8000/api/tasks/4/start"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 09:39:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task started\",\n    \"start_time\": \"2024-09-17T09:39:42.859640Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "end task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NTYyNjA3LCJleHAiOjE3MjY1NjYyMDgsIm5iZiI6MTcyNjU2MjYwOCwianRpIjoibXI1YU9pM3NtVzVBQWc4ZiIsInN1YiI6IjUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.e0GbSgVbbJ4XkY19ZrTSKIeJnWdbud2s9DkpqYfl3T0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/tasks/4/end"
+					},
+					"response": [
+						{
+							"name": "end task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/tasks/4/end"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 17 Sep 2024 09:39:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task ended, contribution hours updated\",\n    \"minutes_worked\": 1\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
